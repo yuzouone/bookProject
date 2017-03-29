@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/wow.min.js"></script>
+    <script src="js/MyFunc.js"></script>
+    <script>
+        window.onload=function () {
+        // 1. 获取标签
+        var aside = document.getElementById('aside');
+        // 2. 求出头部偏移的高度
+        var asideTop = aside.offsetTop;
+        // 3. 监听滚动
+        var begin = 0, end = 0, timer = null;
+        window.onscroll = function () {
+            // 3.0 清除定时器
+            clearInterval(timer);
+
+            // 3.1 获取滚动的高度
+            var scrollTop = scroll().top;
+            end = asideTop + scrollTop;
+
+            // 3.2 缓动动画
+            timer = setInterval(function () {
+                begin = begin + (end - begin)/10;
+                aside.style.top = begin + 'px';
+                if(parseInt(begin) == parseInt(end)){
+                    /*console.log(begin, end);*/
+                    clearInterval(timer);
+                }
+            }, 20);
+        }
+        }
+    </script>
+
+    <script>
+       var wow = new WOW({
+           boxClass:'wow',
+           animateClass:'animated',
+           offset:0,
+           mobile:true
+       });
+        wow.init();
+    </script>
+</head>
+<body class="bg-warning">
+
+<header class="container-fluid ">
+    <div class="container headerin">
+        <div class="top">
+            <nav class="navbar navbar-default navbar-fixed-top ">
+                <div class="container">
+                    <ul class="nav nav-pills ">
+                        <li role="presentation"><a href="#">首页</a></li>
+                        <li role="presentation"><a href="#">历史</a></li>
+                        <li role="presentation"><a href="#">军事</a></li>
+                        <li role="presentation"><a href="#">政治</a></li>
+                        <li role="presentation"><a href="#">科技</a></li>
+                        <li role="presentation"><a href="#">小说</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--<div class="bottom">
+            <nav class="navbar navbar-default navbar-fixed-bottom">
+                <div class="container">
+                    <img src="images/top.jpg" alt="" class="img-responsive">
+                </div>
+            </nav>
+        </div>-->
+    </div>
+
+</header>
+<div class="banner container-fluid bg-success">
+    <div class="container">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="images/02-1.jpg" alt="...">
+
+                </div>
+                <div class="item">
+                    <img src="images/03-1.jpg" alt="...">
+
+                </div>
+                <div class="item">
+                    <img src="images/04-1.jpg" alt="...">
+
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+</div>
+<div class="container-fluid content-new bg-success">
+    <div class="container">
+        <div class="title">
+            <img src="images/title1.jpg" alt="" class="img-responsive">
+        </div>
+        <div class="row kepu">
+            <div class="col-md-3 col-sm-4 col-xs-6 ">
+                <img src="images/kepu1.jpg" alt="" class="wow bounceInDown img-responsive">
+                <p class="wow tada">写给儿童的地理（14册）</p>
+                <p class="wow fadeInLeft">￥199</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 ">
+                <img src="images/kepu2.jpg" alt="" class="wow bounceInDown img-responsive">
+                <p class="wow tada">男孩的冒险书（全12册）</p>
+                <p class="wow fadeInLeft">￥169</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 ">
+                <img src="images/kepu3.jpg" alt="" class="wow bounceInDown img-responsive">
+                <p class="wow tada">让孩子爱上大百科</p>
+                <p class="wow fadeInRight">￥99</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="images/kepu4.jpg" alt="" class="wow bounceInDown img-responsive">
+                <p class="wow tada">了解我自己（全两册）</p>
+                <p class="wow fadeInRight">￥89</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="images/kepu5.jpg" alt="" class="wow fadeInUpBig img-responsive">
+                <p class="wow fadeInLeft">万物简史（珍藏版）</p>
+                <p class="wow bounceInLeft">￥128</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="images/kepu6.jpg" alt="" class="wow fadeInUpBig img-responsive">
+                <p class="wow fadeInLeft">你好，世界（全五册）</p>
+                <p class="wow bounceInLeft">￥299</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="images/kepu7.jpg" alt="" class="wow fadeInUpBig img-responsive">
+                <p class="wow fadeInRight">改变历史进程的五十种植物系列丛书(全三册)</p>
+                <p class="wow bounceInRight">￥114</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="images/kepu8.jpg" alt="" class="wow fadeInUpBig img-responsive">
+                <p class="wow fadeInRight">你好！科学-最亲切的科学原理启蒙合集（全12册）</p>
+                <p class="wow bounceInRight">￥369</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid content-new bg-success">
+    <div class="container">
+        <div class="title">
+            <img src="images/title2.jpg" alt="" class="img-responsive">
+        </div>
+        <div class="row kepu">
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="images/kepu1-1.jpg" alt="" class="wow fadeInUpBig img-responsive" >
+                <p>14只老鼠（全12册）</p>
+                <p>￥127</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="images/kepu2-1.jpg" alt="" class="wow fadeInUpBig img-responsive"   data-wow-delay="0.4s">
+                <p>小汤姆旅行版（全22册）</p>
+                <p>￥278</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="images/kepu3-1.jpg" alt="" class="wow fadeInUpBig img-responsive" data-wow-delay="0.6s">
+                <p>青蛙弗洛洛的故事</p>
+                <p>￥99</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="images/kepu4-1.jpg" alt="" class="wow fadeInUpBig img-responsive"   data-wow-delay="0.8s">
+                <p>十二生肖童话绘本</p>
+                <p>￥109</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="images/kepu5-1.jpg" alt="" class="wow fadeInUpBig img-responsive"   data-wow-delay="0.7s">
+                <p>彩色世界童话全集</p>
+                <p>￥128</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="images/kepu6-1.jpg" alt="" class="wow fadeInUpBig img-responsive"   data-wow-delay="1.2s">
+                <p>小小自然图书馆</p>
+                <p>￥129</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="images/kepu7-1.jpg" alt="" class="wow fadeInUpBig img-responsive"   data-wow-delay="1.4s">
+                <p>苏斯博士童话绘本</p>
+                <p>￥154</p>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <img src="images/kepu8-1.jpg" alt="" class="wow fadeInUpBig img-responsive"   data-wow-delay="1.6s">
+                <p>学会爱自己</p>
+                <p>￥36</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tab container-fluid bg-success">
+    <div class="container">
+        <div>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs tab-ul tab-oul" role="tablist">
+                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">好评最多</a></li>
+                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">最受关注</a></li>
+                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">人气收藏</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">
+                    <img src="images/tab1.jpg" alt="" class="pull-left img-responsive">
+                    <div class="pull-left tab-text">
+                        <p class="bookname">万物简史</p>
+                        <p class="price">价格:<span>￥88</span></p>
+                        <p class="text">这是一部有关现代科学发展史的既通俗易懂又引人入胜的书，作者用清晰明了、幽默风趣的笔法，将宇宙大爆炸到人类文明发展进程中所发生的繁多妙趣横生的故事一一收入笔下。惊奇和感叹组成了本书，历历在目的天下万物组成了本书，益于人们了解大千世界的无穷奥妙，掌握万事万物的发展脉络。书中回溯了科学史上那些伟大与奇妙的时刻，引用了近年来发现的*科学史料，几乎每一个被作者描述的事件都奇特而且惊人：宇宙起源于一个要用显微镜才能看得见的奇点；全球气候变暖可能会使北美洲和欧洲北部地区变得更加寒冷；1815年印度尼西亚松巴哇岛坦博士拉火山喷发，喷涌而出的熔岩以及相伴而来的海啸夺走了10万人的生命</p>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="profile">
+                    <div class="tab1"><img src="images/tab2.jpg" alt="" class="pull-left img-responsive"></div>
+                    <div class="tab1_2 pull-left">
+                        <p class="bookname">炒股的智慧</p>
+                        <p class="price">价格：<span>￥38</span></p>
+                        <p class="text">作者以在华尔街十几年搏击股海的经验教训为感悟素材，在研读了西方几百年来所有的炒股名著和炒股大师传记的基础上，对如何在股市获利*基本、*重要的问题进行了深入思考和探索。本书是为那些和作者一样、真正想以炒股为生的投资者而写。本书初版于1999年，由三联书店出版后，在读者中产生了巨大的反响，十多年来受到各界投资者的广泛推崇，被誉为“炒股圣经”、“*经典的投资著作”，具有永恒的生命力。</p>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="messages">
+                    <div class="tab1">
+                        <img src="images/tab3.jpg" alt="" class="pull-left img-responsive"></div>
+                    <div class="tab1_2 pull-left">
+                        <p class="bookname">哈佛凌晨四点半</p>
+                        <p class="price">价格：<span>￥49</span></p>
+                        <p class="text">《哈佛凌晨四点半》（升级版）是在畅销书《哈佛凌晨四点半》的基础上对内容板块进行了优化，旨在将哈佛的精神和气质通过更为精炼的语言，更为精彩的故事得以体现。《哈佛凌晨四点半》（升级版）除了保留原书中在理想、习惯、性格、情商等方面的内容板块外，又增加了时间管理和自律管理新内容和知识点，能更加激发青少年学生奋发向上，点燃学习热情，引导他们更加努力、更加自觉地学习知识，成为社会的有用之材。</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="footer container-fluid">
+    <div class="container main">
+        <div class="top">
+            <p>战略合作伙伴</p>
+        </div>
+        <div class="bottom row">
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <p>北京时代</p>
+                <p>凤凰含章文化传媒</p>
+                <img src="images/footer1.jpg" alt="" class="img-responsive">
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <p>北京时代</p>
+                <p>凤凰含章文化传媒</p>
+                <img src="images/footer2.jpg" alt="" class="img-responsive">
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <p>北京时代</p>
+                <p>凤凰含章文化传媒</p>
+                <img src="images/footer3.jpg" alt="" class="img-responsive">
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+                <p>北京时代</p>
+                <p>凤凰含章文化传媒</p>
+                <img src="images/footer4.jpg" alt="" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="container">
+        <img src="images/top.jpg" alt="" class="img-responsive dist">
+    </div>
+</div>
+<div id="aside" class="bg-info visible-lg-block">
+    <ul>
+        <li>热门排行</li>
+        <li><span>1</span>《坏蛋是怎样炼成的》</li>
+        <li><span>2</span>《人类未解之谜》</li>
+        <li><span>3</span>《十万个为什么》</li>
+        <li><span>4</span>《老夫子》</li>
+        <li><span>5</span>《三国》</li>
+        <li><span>6</span>《心理学》</li>
+        <li><span>7</span>《厚黑学》</li>
+        <li><span>8</span>《孙子兵法》</li>
+        <li><span>9</span>《红与黑》</li>
+        <li><span>10</span>《囚徒训练法》</li>
+    </ul>
+</div>
+<!--<div id="aside-right">
+    <img src="images/float.jpg" alt="">
+</div>-->
+
+<script src="js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

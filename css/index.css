@@ -1,0 +1,123 @@
+
+
+p:hover{
+    cursor: pointer;
+    color: orange;
+}
+header ul{
+    display: flex;
+}
+header ul li{
+    flex:1;
+    font-size: 30px;
+    text-align: center;
+}
+header ul li:hover{
+    font-size: 35px;
+
+}
+header ul li:hover a{
+    color:mediumvioletred;
+
+}
+header .bottom img{
+
+}
+.banner{
+    margin-top: 70px;
+
+}
+.banner img{
+    width:100%;
+    /*height:300px !important;*/
+}
+.content-new{
+    margin-top: 10px;
+}
+.content-new .kepu div{
+    cursor: pointer;
+}
+.content-new .kepu div p:last-of-type{
+    color:red;
+    font-size: 20px;
+}
+.tab{
+    margin-top: 10px;
+}
+
+.tab .tab-oul{
+    width:100%;
+}
+.tab .tab-ul li{
+    font-size: 20px;
+    font-weight: bold;}
+.tab .bookname{
+    font-weight:bold;
+}
+.tab .price span{
+    color: red;
+}
+.tab .text{
+    width: 600px;}
+.footer{
+    margin-top: 30px;
+
+}
+.footer .main{
+    background: #ccc;
+
+}
+.footer .top{
+    border-bottom:1px #ffffff solid;
+}
+.footer .top p{
+    font-size:25px;
+    font-weight: bolder;
+}
+.footer .bottom div{
+    border-right:1px #ffffff solid;
+    border-top:1px #ffffff solid;
+    border-bottom:1px #ffffff solid;
+}
+.footer .bottom img{
+    margin-top: 30px;
+    margin-bottom:30px;
+}
+.dist{
+    margin-top: 30px;
+}
+#aside{
+    width: 200px;
+
+    position: absolute;
+    left: 0;
+    top: 100px;
+}
+#aside ul{
+    list-style: none;
+}
+#aside ul li{
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+#aside ul li:hover{
+    cursor: pointer;
+    color:mediumspringgreen;
+}
+#aside ul li span:nth-of-type(1){
+    color: red;
+    font-size: 18px;
+}
+#aside ul li span:nth-of-type(n+4){
+    color: #999999;
+
+}
+#aside ul li:nth-of-type(1){
+    font-size: 30px;
+    font-weight: bold;
+    color: mediumvioletred;
+}
+/*
+#aside ul li:nth-of-type(n-1){
+    font-size: 16px;
+}*/
