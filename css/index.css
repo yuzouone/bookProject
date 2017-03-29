@@ -4,25 +4,23 @@ p:hover{
     cursor: pointer;
     color: orange;
 }
-header ul{
+.header ul{
     display: flex;
 }
-header ul li{
+.header ul li{
     flex:1;
     font-size: 30px;
     text-align: center;
 }
-header ul li:hover{
+.header ul li:hover{
     font-size: 35px;
 
 }
-header ul li:hover a{
+.header ul li:hover a{
     color:mediumvioletred;
 
 }
-header .bottom img{
 
-}
 /*.banner{
     margin-top: 70px;
 
